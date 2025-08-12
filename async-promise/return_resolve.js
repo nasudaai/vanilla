@@ -1,4 +1,10 @@
-const resolve = new Promise(resolve => resolve(42))
-console.log(resolve)
+const promise = new Promise(resolve => resolve(42))
+console.log(promise)
 
-resolve.then((value) => console.log(value))
+promise.then((value) => console.log(value))
+
+//short hand
+const promise2 = Promise.resolve(111);
+
+console.log(promise);
+promise2.then(value => console.log(value));
